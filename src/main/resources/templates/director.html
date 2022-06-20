@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SUSTech Management System Director</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" th:href="@{/img/p1.jpeg}" />
+    <link href="../static/css/test.css" th:href="@{/css/d.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/test2.css" th:href="@{/css/d2.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="avatar">
+        <img th:src="@{/img/p2.JPG}" title="director-icon"/>
+    </div>
+    <nav class="nav">
+        <a th:href="@{index}">首页</a>
+        <a href="#info">Director</a>
+        <a href="supply_staff.html">Supply Staff</a>
+        <a href="contracts_manager.html">Contracts Manager</a>
+        <a href="salesman.html">Salesman</a>
+    </nav>
+</aside>
+
+<main>
+
+    <section id="info">
+        <div class="wrap">
+            <a class="th" th:href="@{stockin}">stock in</a>
+        </div>
+    </section>
+
+    <section id="info1">
+        <div class="wrap">
+            <a class="th">place order</a>
+            <div class="row">
+                <form th:method="post">
+                    Contract num: <input type="text" name="contract num"><br>
+                    Enterprise: <input type="text" name="enterprise"><br>
+                    Product model: <input type="text" name="product model"><br>
+                    Quantity: <input type="text" name="quantity"><br>
+                    Contract manager: <input type="text" name="contract manager"><br>
+                    Contract date: <input type="text" name="contract date"><br>
+                    Estimated delivery date: <input type="text" name="estimated delivery date"><br>
+                    Lodgement date: <input type="text" name="lodgement date"><br>
+                    Salesman num: <input type="text" name="salesman num"><br>
+                    Contract type: <input type="text" name="contract type"><br>
+                </form>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </section>
+
+    <section id="info2">
+        <div class="wrap">
+            <a class="th">update order</a>
+            <div class="row">
+                <form th:method="post">
+                    Contract num: <input type="text" name="contract num"><br>
+                    Product model: <input type="text" name="product model"><br>
+                    Salesman num: <input type="text" name="salesman num"><br>
+                    Quantity: <input type="text" name="quantity"><br>
+                    Estimated delivery date: <input type="text" name="estimated delivery date"><br>
+                    Lodgement date: <input type="text" name="lodgement date"><br>
+                </form>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </section>
+
+    <section id="info3">
+        <div class="wrap">
+            <a class="th">delete order</a>
+            <div class="row">
+                <form th:method="post">
+                    Contract num: <input type="text" name="contract num"><br>
+                    Salesman num: <input type="text" name="salesman num"><br>
+                    Seq: <input type="text" th:name="seq"><br>
+                </form>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </section>
+
+    <section id="info4">
+        <div class="wrap">
+            <button class="th">get contract info</button>
+            <div class="row">
+                <p th:text="${getContractInfo}">1</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info5">
+        <div class="wrap">
+            <button class="th">get all staff count</button>
+            <div class="row">
+                <p th:text="${getAllStaffCount}">1</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info6">
+        <div class="wrap">
+            <button class="th">get contract count</button>
+            <div class="row">
+                <p th:text="${getContractCount}">1</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info7">
+        <div class="wrap">
+            <button class="th">get order count</button>
+            <div class="row">
+                <p th:text="${getOrderCount}">1</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info8">
+        <div class="wrap">
+            <button class="th">get never sold product count</button>
+            <div class="row">
+                <p th:text="${getNeverSoldProductCount}">1</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info9">
+        <div class="wrap">
+            <button class="th">get favorite product model</button>
+            <div class="row">
+                <p th:text="${getFavoriteProductModel}">1</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2022 Powered By SUSTech&Co.</p>
+</footer>
+
+</body>
+</html>

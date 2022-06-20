@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* 0 - 全局
+-------------------------------- */
+
+a{ color: #c40b00; }
+
+.wrap{ max-width: 1000px; }
+
+/* 1 - 页眉
+-------------------------------- */
+
+/* - 侧边栏 */
+.sidebar{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 250px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #2bb7b3;
+}
+
+/* -- 头像 */
+.sidebar .avatar{
+    width: 160px;
+    height: 160px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 100%;
+    border: #fff 5px solid;
+    transition: transform 0.5s;
+}
+.sidebar .avatar:hover{
+    transform: scale(105%);
+}
+.sidebar .avatar img{
+    border-radius: 100%;
+}
+
+/* -- 侧边栏导航 */
+.sidebar .nav{
+    margin: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.sidebar .nav a{
+    color: #fff;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+.sidebar .nav a:hover{
+    background: rgba(0, 0, 0, .2);
+}
+
+main{
+    margin-left: 250px;
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar {
+        width: inherit;
+        position: relative;
+    }
+    .sidebar .nav{
+        background: #ed6c00;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .sidebar .nav a:hover{
+        background: none;
+        box-shadow: 0 -3px 0 #fff inset;
+    }
+    main{
+        margin-left: 0;
+    }
+}
+
+@media print{
+    .sidebar{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+}
+
+
+/* 2 - 正文
+-------------------------------- */
+main section{
+    padding: 5em 0;
+    position: relative;
+}
+@media screen and (max-width: 900px) {
+    main section{
+        padding: 3em 0;
+    }
+}
+
+#info{ background: url(../img/paperwall_2.jpg) fixed; background-size: 103%}
+#info1{ background: url(../img/paperwall_2.jpg) fixed; background-size: 103%}
+#info2{ background: url(../img/paperwall_2.jpg) fixed; background-size: 103%}
+#info3{ background: url(../img/paperwall_2.jpg) fixed; background-size: 103%}
+#info4{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info5{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info6{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info7{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info8{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info9{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+#info10{ background: url(../img/paperwall_3.jpg) fixed; background-size: 103%}
+
+.th{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th1{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th2{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th3{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th4{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th5{
+    color:#000000;
+    margin-bottom: 1em;
+    font-size:25px;
+}
+.th:before{
+    float: left;
+    margin-right: .5em;
+    font-family: "FontAwesome";
+}
+
+
+
+/* 3 - 页尾
+-------------------------------- */
+footer{
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    background: #ed6c00;
+}
+footer a{
+    color: inherit;
+}

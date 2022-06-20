@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{~/hotel/hotelinfo}" method="post">
+  <input type="text" th:value="${hotel.hotelId}" name="hotelid" hidden>
+  <button type="submit" class="pull-right btn btn-info" >查看详情
+    <i class="fa fa-arrow-circle-right"></i></button>
+</form>
+</body>
+</html>

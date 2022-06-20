@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SUSTech Management System</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <link th:rel="icon" th:href="@{/img/p1.jpeg}" />
+    <link href="../static/css/test.css" th:href="@{/css/test.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/test2.css" th:href="@{/css/test2.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="avatar">
+            <img src="../static/img/p1.jpeg" th:src="@{/img/p1.jpeg}" title="sustech-icon"/>
+        </div>
+        <nav class="nav">
+            <a href="index.html">首页</a>
+            <a href="#info1">Director</a>
+            <a href="#info2">Supply Staff</a>
+            <a href="#info3">Contracts Manager</a>
+            <a href="#info4">Salesman</a>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="info1">
+            <div class="wrap">
+                <a th:class="th" th:href="@{director}">Sign in as a director</a>
+                <div class="texts">
+                    Manage everything!
+                </div>
+            </div>
+        </section>
+
+        <section id="info2">
+            <div class="wrap">
+                <a class="th" th:href="supply_staff.html">Sign in as a supply staff</a>
+                <div class="texts">
+                    Manage all warehouse related content!
+                </div>
+            </div>
+        </section>
+
+        <section id="info3">
+            <div class="wrap">
+                <a class="th" href="contracts_manager.html">Sign in as a contracts manager</a>
+                <div class="texts">
+                    Manage all order related content!
+                </div>
+            </div>
+        </section>
+
+        <section id="info4">
+            <div class="wrap">
+                <a class="th" href="salesman.html">Sign in as a salesman</a>
+                <div class="texts">
+                    Manage your orders!
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2022 Powered By SUSTech&Co.</p>
+    </footer>
+
+</body>
+</html>

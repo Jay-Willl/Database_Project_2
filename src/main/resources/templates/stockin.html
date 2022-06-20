@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SUSTech Management System Director</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" th:href="@{/img/p1.jpeg}" />
+    <link href="../static/css/test.css" th:href="@{/css/d.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/css/test2.css" th:href="@{/css/d2.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="avatar">
+        <img th:src="@{/img/p2.JPG}" title="director-icon"/>
+    </div>
+    <nav class="nav">
+        <a th:href="@{index}">首页</a>
+        <a href="#info">Director</a>
+        <a href="supply_staff.html">Supply Staff</a>
+        <a href="contracts_manager.html">Contracts Manager</a>
+        <a href="salesman.html">Salesman</a>
+    </nav>
+</aside>
+
+<main>
+
+    <section id="info">
+        <div class="wrap">
+            <a class="th">stock in</a>
+            <div class="row">
+                <form th:action="@{stockin}" method="post">
+                    ID:<input type="text" name="id"><br>
+                    Supply center: <input type="text" name="supply_center"><br>
+                    Product model: <input type="text" name="product_model"><br>
+                    Supply staff: <input type="text" name="supply_staff"><br>
+                    Data: <input type="text" name="data"><br>
+                    Purchase price: <input type="text" name="purchase_price"><br>
+                    Quantity: <input type="text" name="quantity"><br>
+                </form>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2022 Powered By SUSTech&Co.</p>
+</footer>
+
+</body>
+</html>
